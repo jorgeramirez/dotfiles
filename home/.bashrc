@@ -17,13 +17,16 @@ alias gaescaff='cp -r $GAE/new_project_template/* .'
 alias gaedeploy='python2 $GAE/appcfg.py'
 
 ### homesick program
-alias homesick='~/.gem/ruby/1.9.1/gems/homesick-0.6.1/bin/homesick'
+HOMESICK_VERSION=$(gem list --local | grep homesick | sed 's/[()]//g' | cut -f 2 -d " ")
+alias homesick="~/.gem/ruby/1.9.1/gems/homesick-$HOMESICK_VERSION/bin/homesick"
 
 
 ### general
 alias vi='vim'
 #list all installed fonts
 alias listfonts='fc-list | sed s/:.*//g | sort -u'
+alias mysqls='sudo /etc/rc.d/mysqld' #{start|stop|restart}
+alias apache='sudo /etc/rc.d/httpd' #{start|stop|restart}
 
 ### colour coreutils
 eval $(dircolors -b ~/.dir_colors)
