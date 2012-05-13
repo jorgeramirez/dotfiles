@@ -1,0 +1,103 @@
+#author: Jorge Ramirez <jorgeramirez1990@gmail.com>
+
+######################
+# - Conky settings - #
+######################
+background yes
+update_interval 1
+total_run_times 0
+net_avg_samples 1
+cpu_avg_samples 1
+temperature_unit fahrenheit
+
+imlib_cache_size 0
+double_buffer yes
+no_buffers yes
+
+#####################
+# - Text settings - #
+#####################
+use_xft yes
+xftfont Ubuntu:size=9
+override_utf8_locale yes
+text_buffer_size 2048
+
+#############################
+# - Window specifications - #
+#############################
+own_window_class Conky
+own_window yes
+own_window_type desktop
+own_window_transparent yes
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+#own_window_argb_visual yes
+#own_window_argb_value 100
+
+alignment top_right
+gap_x 40
+gap_y 100
+maximum_width 350
+minimum_size 350 450
+
+default_bar_size 60 8
+
+#########################
+# - Graphics settings - #
+#########################
+draw_shades yes
+
+default_color efefef
+default_shade_color 1d1d1d
+color0 ffffff
+color1 ffffff
+color2 ffffff
+
+
+#lua_load ~/.conky/conkybg.lua
+#lua_draw_hook_pre conky_draw_bg
+
+TEXT
+${voffset 12}${font Ubuntu:style=Bold:size=9}HOST
+${hr}
+
+${goto 70}${font Ubuntu:style=Bold:size=8}${color1}   Hostname: $nodename
+${goto 70}${font Ubuntu:style=Bold:size=8}${color1}   System Name: $sysname
+${goto 70}${font Ubuntu:style=Bold:size=8}${color1}   Kernel: $kernel
+${goto 70}${font Ubuntu:style=Bold:size=8}${color1}   Uptime: $uptime
+${goto 70}${font Ubuntu:style=Bold:size=8}${color1}   Arquitecture: $machine
+${goto 70}${font Ubuntu:style=Bold:size=8}   Battery: ${font Ubuntu:style=Bold:size=9}${color1}${execi 30 acpi -b | cut -f2- -d ":" | sed 's/remaining/left/g'}
+
+
+${voffset 12}${font Ubuntu:style=Bold:size=9}CPU
+${hr}
+
+${goto 70}${font Ubuntu:style=Bold:size=8}${color1} ${exec grep "model name" /proc/cpuinfo | sort -u | cut -f 2 -d ":"}
+${goto 70}${font Ubuntu:style=Bold:size=8}${color1}  Usage: ${cpu cpu0}%${font}${color}
+${goto 70}${font Ubuntu:style=Bold:size=8}${color1}  Temperature: ${color1}${font Ubuntu:style=Italic:size=9}${color1}${execi 30 sensors  | grep 'temp1:' | cut -c16-17}°C${color}${font}
+${goto 70}${font Ubuntu:style=Bold:size=8}  Running Processes: ${font Ubuntu:style=Bold:size=9}${color1}${processes}
+
+${voffset 12}${font Ubuntu:style=Bold:size=9}MEMORY
+${hr}
+
+${goto 115}RAM: ${membar 10} ${color1} ${font Ubuntu:style=Bold:size=9}${memperc}% SWAP: ${swapbar 10} ${swapperc}%${font}${color}
+
+${goto 70}${font Ubuntu:style=Bold:size=8}Total:${goto 155}${color2}${memmax} ${goto 305}${swapmax}${color}${font}
+${goto 70}${font Ubuntu:style=Bold:size=8}Free:${goto 155}${font Ubuntu:style=Bold:size=8}${color2}${memeasyfree} ${goto 305}${swapfree}${color}${font}
+${goto 70}${font Ubuntu:style=Bold:size=8}Used:${goto 155}${color2}${mem}  ${goto 305}${swap} ${color}${font}
+
+${voffset 12}${font Ubuntu:style=Bold:size=9}NETWORK${font} ${color}
+${hr}
+
+${if_existing /proc/net/route wlan0}
+${color lightgrey}Down:${color #8844ee} ${downspeed wlan0}/s${color lightgrey} ${goto 251}Up:${color #22ccff} ${upspeed wlan0}/s
+${color black}${downspeedgraph wlan0 32,150 ff0000 0000ff} $alignr${color black}${upspeedgraph wlan0 32,150 0000ff ff0000}
+${else}
+${if_existing /proc/net/route eth0}
+${color lightgrey}Down:${color #8844ee} ${downspeed eth0}/s${color lightgrey} ${goto 251}Up:${color #22ccff} ${upspeed eth0}/s${color black}
+${downspeedgraph eth0 32,150 ff0000 0000ff} $alignr${color black}${upspeedgraph eth0 32,150 0000ff ff0000}
+${endif}
+
+
+${image ~/.conky/Arch.png -p 0,70 -s 45x45}
+${image ~/.conky/Task_Manager.png -p 0,225 -s 45x45}
+${image ~/.conky/Memory.png -p 0,360 -s 45x45}
