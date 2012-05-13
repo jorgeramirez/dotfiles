@@ -16,6 +16,10 @@ alias gaeserver='python2 $GAE/dev_appserver.py'
 alias gaescaff='cp -r $GAE/new_project_template/* .'
 alias gaedeploy='python2 $GAE/appcfg.py'
 
+### homesick program
+alias homesick='~/.gem/ruby/1.9.1/gems/homesick-0.6.1/bin/homesick'
+
+
 ### general
 alias vi='vim'
 #list all installed fonts
