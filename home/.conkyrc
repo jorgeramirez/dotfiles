@@ -97,7 +97,6 @@ ${color lightgrey}Down:${color #8844ee} ${downspeed eth0}/s${color lightgrey} ${
 ${downspeedgraph eth0 32,150 ff0000 0000ff} $alignr${color black}${upspeedgraph eth0 32,150 0000ff ff0000}
 ${endif}
 
-
-${image ~/.conky/Arch.png -p 0,70 -s 45x45}
-${image ~/.conky/Task_Manager.png -p 0,225 -s 45x45}
-${image ~/.conky/Memory.png -p 0,360 -s 45x45}
+${image ~/.conky/images/Arch.png -p 0,70 -s 45x45}
+${image ~/.conky/images/Task_Manager.png -p 0,225 -s 45x45}
+${image ~/.conky/images/Memory.png -p 0,360 -s 45x45}
