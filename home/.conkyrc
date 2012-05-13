@@ -96,6 +96,7 @@ ${if_existing /proc/net/route eth0}
 ${color lightgrey}Down:${color #8844ee} ${downspeed eth0}/s${color lightgrey} ${goto 251}Up:${color #22ccff} ${upspeed eth0}/s${color black}
 ${downspeedgraph eth0 32,150 ff0000 0000ff} $alignr${color black}${upspeedgraph eth0 32,150 0000ff ff0000}
 ${endif}
+${endif}
 
 ${image ~/.conky/images/Arch.png -p 0,70 -s 45x45}
 ${image ~/.conky/images/Task_Manager.png -p 0,225 -s 45x45}
