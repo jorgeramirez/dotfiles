@@ -79,7 +79,7 @@ ${goto 70}${font Ubuntu:style=Bold:size=8}  Running Processes: ${font Ubuntu:sty
 ${voffset 12}${font Ubuntu:style=Bold:size=9}MEMORY
 ${hr}
 
-${goto 115}RAM: ${membar 10} ${color1} ${font Ubuntu:style=Bold:size=9}${memperc}% SWAP: ${swapbar 10} ${swapperc}%${font}${color}
+${goto 105}RAM: ${membar 10} ${color1} ${font Ubuntu:style=Bold:size=9}${memperc}% SWAP: ${swapbar 10} ${swapperc}%${font}${color}
 
 ${goto 70}${font Ubuntu:style=Bold:size=8}Total:${goto 155}${color2}${memmax} ${goto 305}${swapmax}${color}${font}
 ${goto 70}${font Ubuntu:style=Bold:size=8}Free:${goto 155}${font Ubuntu:style=Bold:size=8}${color2}${memeasyfree} ${goto 305}${swapfree}${color}${font}
