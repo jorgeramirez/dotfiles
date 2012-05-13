@@ -2,6 +2,8 @@
 " based on jason ryan's https://bitbucket.org/jasonwryan/eeepc
 set number              " display line number
 set nocompatible                        " vim defaults, not vi!
+
+call pathogen#infect()   "use pathogen to manage and load plugins
 filetype on                             " automatic file type detection
 filetype plugin on
 filetype indent on
