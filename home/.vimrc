@@ -27,3 +27,7 @@ set ignorecase          " case-insensitive search
 set smartcase           " uppercase causes case-sensitive search
 
 colorscheme jellybeans
+
+let g:miniBufExplMapWindowNavVim = 1
+let g:miniBufExplMapWindowNavArrows = 1
+let g:miniBufExplModSelTarget = 1
