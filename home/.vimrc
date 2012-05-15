@@ -26,6 +26,11 @@ set incsearch           " increment search
 set ignorecase          " case-insensitive search
 set smartcase           " uppercase causes case-sensitive search
 
+" enable 256 colors
+set t_Co=256
+set t_AB=^[[48;5;%dm
+set t_AF=^[[38;5;%dm
+
 colorscheme jellybeans
 
 let g:miniBufExplMapWindowNavVim = 1
