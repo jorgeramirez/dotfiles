@@ -34,3 +34,4 @@ colorscheme jellybeans
 let g:miniBufExplMapWindowNavVim = 1
 let g:miniBufExplMapWindowNavArrows = 1
 let g:miniBufExplModSelTarget = 1
+let g:miniBufExplorerMoreThanOne=0
