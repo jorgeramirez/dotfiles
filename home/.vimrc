@@ -9,12 +9,12 @@ if &t_Co < 256
     colorscheme miro8
 else
     colorscheme jellybeans
+endif
 
 call pathogen#infect()   "use pathogen to manage and load plugins
 set nocompatible        " leave the old ways behind...
 set nowrap              " don't wrap lines
 set nobackup            " disable backup files (filename~)
-set splitbelow          " place new files below the current
 set clipboard+=unnamed  " yank and copy to X clipboard
 set encoding=utf-8      " UTF-8 encoding for all new files
 set backspace=2         " full backspacing capabilities (indent,eol,start)
@@ -49,5 +49,4 @@ set smartcase           " uppercase causes case-sensitive search
 let g:miniBufExplMapWindowNavVim = 1
 let g:miniBufExplMapWindowNavArrows = 1
 let g:miniBufExplModSelTarget = 1
-let g:miniBufExplorerMoreThanOne=0
-
+let g:miniBufExplorerMoreThanOne = 0
