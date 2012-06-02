@@ -5,11 +5,9 @@ syntax on
 filetype plugin on
 filetype indent on
 
-if &t_Co < 256
-    colorscheme miro8
-else
-    colorscheme jellybeans
-endif
+" enable 256 colors
+set t_Co=256
+colorscheme jellybeans
 
 call pathogen#infect()   "use pathogen to manage and load plugins
 set nocompatible        " leave the old ways behind...
@@ -52,7 +50,7 @@ let g:miniBufExplModSelTarget = 1
 let g:miniBufExplorerMoreThanOne = 0
 
 " rainbown parentheses allways on
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
+"au VimEnter * RainbowParenthesesToggle
+"au Syntax * RainbowParenthesesLoadRound
+"au Syntax * RainbowParenthesesLoadSquare
+"au Syntax * RainbowParenthesesLoadBraces
