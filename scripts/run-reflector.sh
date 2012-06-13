@@ -13,7 +13,6 @@ Optional arguments:
     -h, --help        Display help information and exit
     -n n, --number n  Return at most n mirrors (defaults to 8)
 EOF
-        
     exit
 }
 
@@ -33,7 +32,7 @@ isdigit() {
 
 n=8
 
-options=`getopt -o hn: -l help,number:  -n 'run-reflector' -- ${1+"$@"}`
+options=`getopt -o hn: -l help,number:  -n 'run-reflector' -- "$@"`
 if [ $? !=  0 ] ; then
     echo "Something went wrong. Terminating..." >&2
     exit 1
