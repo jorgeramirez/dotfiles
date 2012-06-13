@@ -72,3 +72,7 @@ extract() {
 # paste from clipboard
 px() { printf '%s\n' $(xsel -b); }
 
+# print bold the given text
+print_bold() {
+    printf "$(tput sgr0 ; tput bold)$@$(tput sgr0)\n"
+}
