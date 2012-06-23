@@ -76,3 +76,6 @@ px() { printf '%s\n' $(xsel -b); }
 print_bold() {
     printf "$(tput sgr0 ; tput bold)$@$(tput sgr0)\n"
 }
+
+#sencha touch enviroment
+export SENCHA_SDK_TOOLS_2_0_0_BETA3=/srv/http/lib/sencha-touch
