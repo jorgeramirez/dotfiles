@@ -46,3 +46,6 @@
 [submodule "home/.vim/bundle/rainbow_parentheses.vim"]
 	path = home/.vim/bundle/rainbow_parentheses.vim
 	url = git://github.com/kien/rainbow_parentheses.vim.git
+[submodule "home/.vim/bundle/vim-pig"]
+	path = home/.vim/bundle/vim-pig
+	url = git://github.com/jorgeramirez/vim-pig.git
