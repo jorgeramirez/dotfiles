@@ -16,8 +16,8 @@ alias gaeserver='python2 $GAE/dev_appserver.py'
 alias gaescaff='cp -r $GAE/new_project_template/* .'
 alias gaedeploy='python2 $GAE/appcfg.py'
 
-### add gem/ruby/bin to $PATH
-export PATH=$PATH:/home/jorge/.gem/ruby/1.9.1/bin
+### add gem/ruby/bin and node_modules/.bin to $PATH
+export PATH=$PATH:/home/jorge/.gem/ruby/1.9.1/bin:/home/jorge/node_modules/.bin
 
 ### general
 alias vi='vim'
