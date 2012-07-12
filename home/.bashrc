@@ -16,10 +16,8 @@ alias gaeserver='python2 $GAE/dev_appserver.py'
 alias gaescaff='cp -r $GAE/new_project_template/* .'
 alias gaedeploy='python2 $GAE/appcfg.py'
 
-### homesick program
-HOMESICK_VERSION=$(gem list --local | grep homesick | sed 's/[()]//g' | cut -f 2 -d " ")
-alias homesick="~/.gem/ruby/1.9.1/gems/homesick-$HOMESICK_VERSION/bin/homesick"
-
+### add gem/ruby/bin to $PATH
+export PATH=$PATH:/home/jorge/.gem/ruby/1.9.1/bin
 
 ### general
 alias vi='vim'
