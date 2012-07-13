@@ -52,3 +52,9 @@
 [submodule "home/.vim/bundle/SearchComplete"]
 	path = home/.vim/bundle/SearchComplete
 	url = git://github.com/vim-scripts/SearchComplete.git
+[submodule "home/.vim/bundle/syntastic"]
+	path = home/.vim/bundle/syntastic
+	url = git://github.com/scrooloose/syntastic.git
+[submodule "home/.vim/bundle/tagbar"]
+	path = home/.vim/bundle/tagbar
+	url = git://github.com/majutsushi/tagbar.git
