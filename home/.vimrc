@@ -54,3 +54,7 @@ let g:miniBufExplorerMoreThanOne = 0
 "au Syntax * RainbowParenthesesLoadRound
 "au Syntax * RainbowParenthesesLoadSquare
 "au Syntax * RainbowParenthesesLoadBraces
+
+" SingleCompile plugin
+nmap <F9> :SCCompile<cr>
+nmap <F10> :SCCompileRun<cr>
