@@ -25,6 +25,7 @@ alias vi='vim'
 alias listfonts='fc-list | sed s/:.*//g | sort -u'
 alias mysqls='sudo /etc/rc.d/mysqld' #{start|stop|restart}
 alias apache='sudo /etc/rc.d/httpd' #{start|stop|restart}
+alias chrome='google-chrome --enable-webgl --ignore-gpu-blacklist'
 
 ### colour coreutils
 eval $(dircolors -b ~/.dir_colors)
