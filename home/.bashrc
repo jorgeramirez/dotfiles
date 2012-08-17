@@ -19,6 +19,10 @@ alias gaedeploy='python2 $GAE/appcfg.py'
 ### add gem/ruby/bin and node_modules/.bin to $PATH
 export PATH=$PATH:/home/jorge/.gem/ruby/1.9.1/bin:/home/jorge/node_modules/.bin
 
+### Sencha SDK Tools enviroment
+export SENCHA_SDK_TOOLS_2_0_0_BETA3=/opt/SenchaSDKTools-2.0.0-beta3
+alias sencha="$SENCHA_SDK_TOOLS_2_0_0_BETA3/sencha"
+
 ### general
 alias vi='vim'
 #list all installed fonts
@@ -76,5 +80,4 @@ print_bold() {
     printf "$(tput sgr0 ; tput bold)$@$(tput sgr0)\n"
 }
 
-#sencha touch enviroment
-export SENCHA_SDK_TOOLS_2_0_0_BETA3=/srv/http/lib/sencha-touch
+
