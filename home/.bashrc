@@ -31,6 +31,9 @@ alias mysqls='sudo /etc/rc.d/mysqld' #{start|stop|restart}
 alias apache='sudo /etc/rc.d/httpd' #{start|stop|restart}
 alias chrome='google-chrome --enable-webgl --ignore-gpu-blacklist'
 
+### EDITOR variable is used by visudo command
+export EDITOR=vim
+
 ### colour coreutils
 eval $(dircolors -b ~/.dir_colors)
 export GREP_COLOR="1;31"
