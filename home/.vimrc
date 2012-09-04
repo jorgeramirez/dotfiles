@@ -1,15 +1,28 @@
 " author: Jorge Ramirez <jorgeramirez1990@gmail.com>
 " a subset of jason ryan's https://bitbucket.org/jasonwryan/eeepc .vimrc file
 
-syntax on
+"use pathogen to manage and load plugins
+call pathogen#infect()   
+
+
 filetype plugin on
 filetype indent on
 
-" enable 256 colors
-set t_Co=256
-colorscheme jellybeans
 
-call pathogen#infect()   "use pathogen to manage and load plugins
+" Theme preferences
+" -----------------
+syntax on
+
+if $TERM == 'xterm' && &t_Co == 8
+    set t_Co=256
+
+endif
+
+colorscheme smyck
+
+
+" Preferences
+" -----------
 set nocompatible        " leave the old ways behind...
 set nowrap              " don't wrap lines
 set nobackup            " disable backup files (filename~)
@@ -25,6 +38,11 @@ set spelllang=en_us     " real English spelling
 let g:is_posix=1        " POSIX shell scripts
 set wildmode=list:longest,full
 let g:loaded_matchparen=1
+set showmode
+
+if has("mouse")
+    set mouse=a
+endif
 
 syn match ErrorLeadSpace /^ \+/         " highlight any leading spaces
 syn match ErrorTailSpace / \+$/         " highlight any trailing spaces
@@ -43,6 +61,10 @@ set incsearch           " increment search
 set ignorecase          " case-insensitive search
 set smartcase           " uppercase causes case-sensitive search
 
+
+" Plugin configs
+" --------------
+
 " minibufexpl plugin options
 let g:miniBufExplMapWindowNavVim = 1
 let g:miniBufExplMapWindowNavArrows = 1
@@ -58,3 +80,6 @@ let g:miniBufExplorerMoreThanOne = 0
 " SingleCompile plugin
 nmap <F9> :SCCompile<cr>
 nmap <F10> :SCCompileRun<cr>
+
+" Tell snipmate to pull it's snippets from a custom directory
+let g:snippets_dir = $HOME.'/.vim/snippets/'
