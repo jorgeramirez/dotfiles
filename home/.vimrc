@@ -80,6 +80,3 @@ let g:miniBufExplorerMoreThanOne = 0
 " SingleCompile plugin
 nmap <F9> :SCCompile<cr>
 nmap <F10> :SCCompileRun<cr>
-
-" Tell snipmate to pull it's snippets from a custom directory
-let g:snippets_dir = $HOME.'/.vim/snippets/'

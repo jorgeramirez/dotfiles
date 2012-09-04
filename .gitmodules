@@ -70,9 +70,21 @@
 [submodule "home/.vim/bundle/Lucius.git"]
 	path = home/.vim/bundle/Lucius.git
 	url = git://github.com/vim-scripts/Lucius.git
-[submodule "home/.vim/bundle/snipmate.vim.git"]
-	path = home/.vim/bundle/snipmate.vim.git
-	url = git://github.com/msanders/snipmate.vim.git
 [submodule "home/.vim/bundle/vim-surround.git"]
 	path = home/.vim/bundle/vim-surround.git
 	url = git://github.com/tpope/vim-surround.git
+[submodule "home/.vim/bundle/html5.vim.git"]
+	path = home/.vim/bundle/html5.vim.git
+	url = git://github.com/othree/html5.vim.git
+[submodule "home/.vim/bundle/vim-snipmate.git"]
+	path = home/.vim/bundle/vim-snipmate.git
+	url = git://github.com/garbas/vim-snipmate.git
+[submodule "home/.vim/bundle/tlib_vim.git"]
+	path = home/.vim/bundle/tlib_vim.git
+	url = git://github.com/tomtom/tlib_vim.git
+[submodule "home/.vim/bundle/vim-addon-mw-utils.git"]
+	path = home/.vim/bundle/vim-addon-mw-utils.git
+	url = git://github.com/MarcWeber/vim-addon-mw-utils.git
+[submodule "home/.vim/bundle/snipmate-snippets.git"]
+	path = home/.vim/bundle/snipmate-snippets.git
+	url = git://github.com/honza/snipmate-snippets.git
