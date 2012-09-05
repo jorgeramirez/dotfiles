@@ -8,38 +8,33 @@
 # set correct term
 set -g default-terminal screen-256color
 
-# set prefix key to ctrl+t
-unbind C-b
-set -g prefix C-a
+# set prefix key to ctrl+a
+set-option -g prefix C-a
+
 
 # reload config without killing server
-bind R source-file ~/.tmux/conf \; display-message "  Config reloaded..."
+bind r source-file ~/.tmux/conf \; display-message "  Config reloaded..."
 
 # more intuitive keybindings for splitting
-unbind %
-bind h split-window -v
-unbind '"'
-bind v split-window -h
+unbind-key %
+bind-key -n C-h split-window -v
+unbind-key '"'
+bind-key -n C-s split-window -h
 
 # set vi keys
 setw -g mode-keys vi
-unbind [
-bind Escape copy-mode
-unbind p
-bind p paste-buffer
+unbind-key [
+bind-key Escape copy-mode
+unbind-key p
+bind-key p paste-buffer
 bind-key -t vi-copy 'v' begin-selection
 bind-key -t vi-copy 'y' copy-selection
 
-# copy tmux buffer to clipboard
-bind C-y run "tmux show-buffer | xsel -b"
-# move x clipboard into tmux paste buffer
-bind C-p run "tmux set-buffer \"$(xsel -o)\"; tmux paste-buffer"
 
-# pane selection
-bind Left select-pane -L
-bind Right select-pane -R
-bind Up select-pane -U
-bind Down select-pane -D
+# copy tmux buffer to clipboard
+bind C-c run "tmux show-buffer | xsel -b"
+# move x clipboard into tmux paste buffer
+bind C-v run "tmux set-buffer \"$(xsel -o)\"; tmux paste-buffer"
 
 # pane/window movement
 bind-key j command-prompt -p "join pane from:" "join-pane -s '%%'"
@@ -108,7 +103,8 @@ set -g update-environment "DISPLAY SSH_ASKPASS SSH_AUTH_SOCK SSH_AGENT_PID SSH_C
 set -g window-status-format "#I:#W"
 set -g window-status-current-format "#I:#W"
 
-set -g status-keys vi
+
+#set -g status-keys vi
 bind-key -t vi-edit Up history-up
 bind-key -t vi-edit Down history-down
 
@@ -136,6 +132,12 @@ set-window-option -g window-status-current-attr bright
 set -g message-fg white
 set -g message-bg black
 set -g message-attr bright
+
+# scroll issues
+set -g terminal-overrides 'xterm*:smcup@:rmcup@'
+
+# mouse select pane
+set -g mouse-select-pane on
 
 # Statusbar starting in X or not
 if '[ -n "$DISPLAY" ]' 'source-file ~/.tmux/inx'
