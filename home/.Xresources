@@ -18,7 +18,7 @@ URxvt*saveLines:        10000
 URxvt*geometry:         89x24
 URxvt*iconFile:         /usr/share/icons/Faenza/apps/scalable/utilities-terminal.svg
 URxvt*scrollBar:        false
-URxvt*secondaryScroll:  false
+URxvt*secondaryScroll:  true
 
 URxvt.buffered: true
 URxvt*cursorBlink:      false
