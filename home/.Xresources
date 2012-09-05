@@ -86,7 +86,6 @@ yeahconsole*handleWidth:   2
 yeahconsole*consoleHeight: 49
 yeahconsole*aniDelay:      0
 yeahconsole*stepSize:      25
-yeahconsole*yOffset:       22
 yeahconsole*toggleKey:     none+F12
 
 !the following option only works in my patched version of yeahconsole
