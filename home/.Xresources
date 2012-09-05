@@ -46,7 +46,7 @@ URxvt.copyCommand:  xclip -i -selection clipboard
 URxvt.pasteCommand: xclip -o -selection clipboard
 URxvt*keysym.C-u:         perl:matcher
 URxvt*keysym.M-Escape:    perl:keyboard-select:activate
-URxvt*keysym.M-e:         perl:keyborad-select:activate
+URxvt*keysym.M-e:         perl:keyboard-select:activate
 URxvt*keysym.Mod4-c:      perl:clipboard:copy
 URxvt*keysym.Mod4-v:      perl:clipboard:paste
 URxvt*keysym.F11:         perl:fullscreen:switch
