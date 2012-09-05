@@ -1,0 +1,72 @@
+! ----------------------------------------------------------------------------
+! file:     ~/.Xresources
+!-------------------------------------------------------------------------------
+
+Xft.autohint: 0
+Xft.lcdfilter:  lcddefault
+Xft.hintstyle:  hintfull
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.dpi: 96
+Xft.rgba: rgb
+Xcursor*theme: Vanilla-DMZ
+
+! {{{ URxvt
+URxvt*termName:         rxvt-unicode-256color
+URxvt*loginShell:       true
+URxvt*saveLines:        10000
+URxvt*geometry:         89x24
+URxvt*iconFile:         /usr/share/icons/Faenza/apps/scalable/utilities-terminal.svg
+URxvt*scrollBar:        false
+URxvt*secondaryScroll:  false
+
+URxvt.buffered: true
+URxvt*cursorBlink:      false
+URxvt*borderless:       1
+
+URxvt*skipBuiltinGlyphs: true
+URxvt*xftAntialias:     true
+URxvt*depth:            32
+URxvt*transparent:      true
+URxvt*inheritPixmap:    true
+URxvt*shading:          35
+URxvt*fadeColor:        black
+URxvt*tintColor:        #555555
+URxvt*dynamicColors:    on
+
+URxvt*visualBell:       true
+URxvt*urgentOnBell:     true
+urxvt*colorMode: on
+URxvt*perl-lib:           /usr/lib/urxvt/perl/
+URxvt*perl-ext-common:    default,tabbed,matcher,keyboard-select,clipboard,fullscreen
+URxvt*urlLauncher:        /usr/bin/chromium
+URxvt*matcher.button:     1
+URxvt*matcher.pattern.1:  \\bwww\\.[\\w-]+\\.[\\w./?&@#-]*[\\w/-]
+URxvt.copyCommand:  xclip -i -selection clipboard
+URxvt.pasteCommand: xclip -o -selection clipboard
+URxvt*keysym.C-u:         perl:matcher
+URxvt*keysym.M-Escape:    perl:keyboard-select:activate
+URxvt*keysym.M-e:         perl:keyborad-select:activate
+URxvt*keysym.Mod4-c:      perl:clipboard:copy
+URxvt*keysym.Mod4-v:      perl:clipboard:paste
+URxvt*keysym.F11:         perl:fullscreen:switch
+
+! making vi recognize urxvt's Ctrl-Arrow keycodes
+URxvt.keysym.Control-Up:      \033[1;5A
+URxvt.keysym.Control-Down:    \033[1;5B
+URxvt.keysym.Control-Left:    \033[1;5D
+URxvt.keysym.Control-Right:   \033[1;5C
+
+
+! }}}
+
+!-------------------------------------------------------------------------------
+! {{{ Fonts
+URxvt.font:xft:monospace:medium:size=10
+URxvt.boldFont:xft:monospace:medium:size=10
+! }}}
+
+!-------------------------------------------------------------------------------
+! {{{ Colours
+#include ".colors/Smyck"
+!}}}

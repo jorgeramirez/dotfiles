@@ -2,13 +2,19 @@
 # ~/.bashrc
 #
 # author: Jorge Ramirez <jorgeramirez1990@gmail.com>
-# based on jason ryan's https://bitbucket.org/jasonwryan/eeepc
+# ideas from jason ryan's https://bitbucket.org/jasonwryan/eeepc
 
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
 PS1='[\u@\h \W]\$ '
+
+# set TERM env variable to xterm-256color if possible
+#if [ "$(find /usr/share/terminfo -type f | grep xterm-256color)" != "" ]; then
+    #export TERM=xterm-256color
+#fi
+
 
 ### app engine stuff
 export GAE=/opt/google_appengine

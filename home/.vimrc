@@ -61,6 +61,10 @@ set incsearch           " increment search
 set ignorecase          " case-insensitive search
 set smartcase           " uppercase causes case-sensitive search
 
+" pastetoogle
+nnoremap <F2> :set invpaste paste?<CR>
+set pastetoggle=<F2>
+
 
 " Plugin configs
 " --------------
