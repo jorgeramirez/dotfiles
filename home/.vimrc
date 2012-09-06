@@ -1,4 +1,4 @@
-" author: Jorge Ramirez <jorgeramirez1990@gmail.com>
+" author: jorge ramirez <jorgeramirez1990@gmail.com>
 " a subset of jason ryan's https://bitbucket.org/jasonwryan/eeepc .vimrc file
 
 "use pathogen to manage and load plugins
@@ -9,14 +9,18 @@ filetype plugin on
 filetype indent on
 
 
-" Theme preferences
+" theme preferences
 " -----------------
 syntax on
 
-if $TERM == 'xterm' && &t_Co == 8
-    set t_Co=256
-
+if has("t_Co") && &t_co == 8
+    set t_co=256
 endif
+
+" set $term to rxvt-unicode-256color
+" this make fn keys work otherwise fn + p while 
+" insert a j instead of *
+set term=rxvt-unicode-256color
 
 colorscheme smyck
 

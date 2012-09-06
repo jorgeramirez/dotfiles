@@ -42,13 +42,13 @@ URxvt*perl-ext-common:    default,tabbed,matcher,keyboard-select,clipboard,fulls
 URxvt*urlLauncher:        /usr/bin/chromium
 URxvt*matcher.button:     1
 URxvt*matcher.pattern.1:  \\bwww\\.[\\w-]+\\.[\\w./?&@#-]*[\\w/-]
-URxvt.copyCommand:  xclip -i -selection clipboard
-URxvt.pasteCommand: xclip -o -selection clipboard
+!URxvt.copyCommand:  xclip -i -selection clipboard
+!URxvt.pasteCommand: xclip -o -selection clipboard
 URxvt*keysym.C-u:         perl:matcher
 URxvt*keysym.M-Escape:    perl:keyboard-select:activate
 URxvt*keysym.M-e:         perl:keyboard-select:activate
-URxvt*keysym.Mod4-c:      perl:clipboard:copy
-URxvt*keysym.Mod4-v:      perl:clipboard:paste
+URxvt*keysym.C-y:      perl:clipboard:copy
+URxvt*keysym.C-v:      perl:clipboard:paste
 URxvt*keysym.F11:         perl:fullscreen:switch
 
 !making vi recognize urxvts Ctrl-Arrow keycodes
@@ -57,6 +57,13 @@ URxvt.keysym.Control-Down:    \033[1;5B
 URxvt.keysym.Control-Left:    \033[1;5D
 URxvt.keysym.Control-Right:   \033[1;5C
 
+!disable keycode picture mode
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+
+!highlight man pages search
+URxvt.colorIT:   #87af5f
+URxvt.colorUL:   #87afd7
 
 ! }}}
 

@@ -30,14 +30,6 @@ bind-key p paste-buffer
 bind-key -t vi-copy 'v' begin-selection
 bind-key -t vi-copy 'y' copy-selection
 
-
-# copy tmux buffer to clipboard
-unbind c
-bind c run "tmux show-buffer | xsel -b"
-# move x clipboard into tmux paste buffer
-unbind v
-bind v run "tmux set-buffer \"$(xsel -b)\"; tmux paste-buffer"
-
 # pane/window movement
 bind-key j command-prompt -p "join pane from:" "join-pane -s '%%'"
 bind-key s command-prompt -p "send pane to:" "join-pane -t '%%'"
@@ -106,7 +98,7 @@ set -g window-status-format "#I:#W"
 set -g window-status-current-format "#I:#W"
 
 
-#set -g status-keys vi
+set -g status-keys vi
 bind-key -t vi-edit Up history-up
 bind-key -t vi-edit Down history-down
 
@@ -118,7 +110,7 @@ set -g status-fg white
 set -g status-bg default
 
 # in order to make vim arrow keys mapping work
-set-window-option -g xterm-keys on
+setw -g xterm-keys on
 
 # default window title colors
 set-window-option -g window-status-fg black
@@ -138,8 +130,12 @@ set -g message-attr bright
 # scroll issues
 set -g terminal-overrides 'xterm*:smcup@:rmcup@'
 
-# mouse select pane
-set -g mouse-select-pane on
+# Allow mouse to interact with windows and panes
+#set -g mouse-resize-pane on
+#set -g mouse-select-pane on
+#set -g mouse-select-window on
+
+#set -g mode-mouse on
 
 # Statusbar starting in X or not
 if '[ -n "$DISPLAY" ]' 'source-file ~/.tmux/inx'
