@@ -18,7 +18,7 @@ if has("t_Co") && &t_co == 8
 endif
 
 " set $term to rxvt-unicode-256color
-" this make fn keys work otherwise fn + p while 
+" this make fn keys work otherwise fn + p will 
 " insert a j instead of *
 set term=rxvt-unicode-256color
 
