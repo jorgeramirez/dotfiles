@@ -98,3 +98,6 @@ let g:miniBufExplorerMoreThanOne = 0
 " SingleCompile plugin
 nmap <F9> :SCCompile<cr>
 nmap <F10> :SCCompileRun<cr>
+
+" zencoding plugin
+let g:user_zen_leader_key = '<c-t>'
