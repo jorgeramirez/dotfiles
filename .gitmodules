@@ -88,3 +88,6 @@
 [submodule "home/.vim/bundle/snipmate-snippets.git"]
 	path = home/.vim/bundle/snipmate-snippets.git
 	url = git://github.com/honza/snipmate-snippets.git
+[submodule "bin/z.git"]
+	path = bin/z.git
+	url = git://github.com/rupa/z.git
