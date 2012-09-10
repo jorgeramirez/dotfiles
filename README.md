@@ -4,12 +4,12 @@ My personal dotfiles, scripts, etc.
 
 ## Dependencies
 
-* *_tmux_* terminal multiplexing
-* *_urxvt_* terminal emulator
-* *_gpaste_* clipboard management
-* *_vim_* cool editor (compiled with clipboard support)
-* *_conky_* system monitor
-* *_z_* cool command to jump to most used directories
+* _**tmux**_ terminal multiplexing
+* _**urxvt**_ terminal emulator
+* _**gpaste**_ clipboard management
+* _**vim**_ cool editor (compiled with clipboard support)
+* _**conky**_ system monitor
+* _**z**_ cool command to jump to most used directories
 
 ##Install
 
