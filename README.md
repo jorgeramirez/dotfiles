@@ -28,7 +28,13 @@ You need to create the following startup apps (depends on Desktop Enviroment)
 * yeahconsole launcher: binds to $HOME/scripts/yeahconsole-launcher.sh
 * fake xinitrc (if using DM): binds to $HOME/scripts/fake-xinitrc.sh
 
-##Update submodules
+##Updating
+
+###Update repository
+
+Run `$HOME/scripts/update.sh` to update your repository.
+
+###Update submodules
 
 In order to update submodules run `$HOME/scripts/update-submodules.sh` then just
 push back the changes to your repository. I'll do this at least once a week.
