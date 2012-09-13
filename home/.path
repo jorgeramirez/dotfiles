@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# Manipulates $PATH env variable
+# Author: Jorge Ramirez <jorgeramirez1990@gmail.com>
+
+### add gem/ruby/bin and node_modules/.bin to $PATH
+export PATH=$PATH:$HOiME/.gem/ruby/1.9.1/bin:$HOME/node_modules/.bin

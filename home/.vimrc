@@ -9,6 +9,7 @@ filetype plugin on
 filetype indent on
 
 
+
 " theme preferences
 " -----------------
 syntax on
@@ -23,6 +24,7 @@ endif
 set term=rxvt-unicode-256color
 
 colorscheme smyck
+
 
 
 " Preferences
@@ -52,6 +54,18 @@ syn match ErrorLeadSpace /^ \+/         " highlight any leading spaces
 syn match ErrorTailSpace / \+$/         " highlight any trailing spaces
 syn match Error80        /\%>80v.\+/    " highlight anything past 80 in red
 
+" Don’t add empty newlines at the end of files
+set binary
+set noeol
+
+" Centralize backups, swapfiles and undo history
+set backupdir=~/.vim/backups
+set directory=~/.vim/swaps
+
+if exists("&undodir")
+    set undodir=~/.vim/undo
+endif
+
 " tabs and indenting
 set tabstop=4                " tabs appear as n number of columns
 set shiftwidth=4             " n cols for auto-indenting
@@ -59,18 +73,32 @@ set expandtab                " insert spaces instead of tabs
 set autoindent  smartindent  " auto indents next new line
 set smarttab                 " make <tab> and <backspace> smarter
 
+" HTML (tab width 2 chr, no wrapping)
+autocmd FileType html setlocal sw=2
+autocmd FileType html setlocal ts=2
+autocmd FileType html setlocal sts=2
+autocmd FileType html set textwidth=0
+" XHTML (tab width 2 chr, no wrapping)
+autocmd FileType xhtml setlocal sw=2
+autocmd FileType xhtml setlocal ts=2
+autocmd FileType xhtml setlocal sts=2
+autocmd FileType xhtml setlocal textwidth=0
+" CSS (tab width 2 chr, wrap at 79th char)
+autocmd FileType css setlocal sw=2
+autocmd FileType css setlocal ts=2
+autocmd FileType css setlocal sts=2
+
+
 " searching
 set hlsearch            " highlight all search results
 set incsearch           " increment search
 set ignorecase          " case-insensitive search
 set smartcase           " uppercase causes case-sensitive search
 
-" pastetoogle
-nnoremap <F2> :set invpaste paste?<CR>
-set pastetoggle=<F2>
 
 
 " tmux
+" ----
 if &term =~ '^screen'
     " tmux will send xterm-style keys when its xterm-keys option is on
     execute "set <xUp>=\e[1;*A"
@@ -78,6 +106,24 @@ if &term =~ '^screen'
     execute "set <xRight>=\e[1;*C"
     execute "set <xLeft>=\e[1;*D"
 endif
+
+
+
+" keymap
+" ------
+
+" SingleCompile plugin
+nmap <F9> :SCCompile<cr>
+nmap <F10> :SCCompileRun<cr>
+
+" pastetoogle
+nnoremap <F2> :set invpaste paste?<CR>
+set pastetoggle=<F2>
+
+" NERDTree & Tagbar
+nmap <F3> :NERDTreeToggle<CR>
+nmap <F4> :TagbarToggle<CR>
+
 
 
 " Plugin configs
@@ -95,9 +141,11 @@ let g:miniBufExplorerMoreThanOne = 0
 "au Syntax * RainbowParenthesesLoadSquare
 "au Syntax * RainbowParenthesesLoadBraces
 
-" SingleCompile plugin
-nmap <F9> :SCCompile<cr>
-nmap <F10> :SCCompileRun<cr>
 
 " zencoding plugin
 let g:user_zen_leader_key = '<c-t>'
+
+" vim-javascript plugin
+let g:html_indent_inctags = "html,body,head,tbody"
+let g:html_indent_script1 = "inc"
+let g:html_indent_style1 = "inc"

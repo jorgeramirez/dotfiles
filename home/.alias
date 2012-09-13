@@ -1,0 +1,35 @@
+#!/bin/bash
+
+# aliases
+# Author: Jorge Ramirez <jorgeramirez1990@gmail.com>
+
+## app engine stuff
+alias gaeserver='python2 $GAE/dev_appserver.py'
+alias gaescaff='cp -r $GAE/new_project_template/* .'
+alias gaedeploy='python2 $GAE/appcfg.py'
+
+
+## Sencha SDK Tools enviroment
+alias sencha="$SENCHA_SDK_TOOLS_2_0_0_BETA3/sencha"
+
+### general
+alias vi='vim'
+#list all installed fonts
+alias listfonts='fc-list | sed s/:.*//g | sort -u'
+alias mysqls='sudo /etc/rc.d/mysqld' #{start|stop|restart}
+alias apache='sudo /etc/rc.d/httpd' #{start|stop|restart}
+alias chrome='google-chrome --enable-webgl --ignore-gpu-blacklist'
+alias sudo='sudo '
+
+
+### colour coreutils
+alias grep="grep --color=auto"
+alias ls="ls --color=auto"
+alias la="ls -AlF"
+
+###  Power
+alias reboot="sudo shutdown -r now"
+alias shut="sudo shutdown -h now"
+
+### Pacman
+alias pacman='pacman-color'
