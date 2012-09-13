@@ -69,8 +69,13 @@ URxvt.colorUL:   #87afd7
 
 !-------------------------------------------------------------------------------
 ! {{{ Fonts
-URxvt.font:xft:monospace:medium:size=10
-URxvt.boldFont:xft:monospace:medium:size=10
+!URxvt.font:xft:monospace:medium:size=10
+!URxvt.boldFont:xft:monospace:medium:size=10
+
+!URxvt.font: xft:terminus:size=10
+!URxvt.boldFont: xft:terminus:size=10
+
+URxvt*font:xft:Bitstream Vera Sans Mono-10 
 ! }}}
 
 !-------------------------------------------------------------------------------
