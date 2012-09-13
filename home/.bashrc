@@ -10,11 +10,11 @@
 [[ $- != *i* ]] && return
 [[ $TERM != screen* ]] && exec tmux
 
-PS1='[\u@\h \W]\$ '
-
-for f in ~/.{path,exports,functions,extra,alias}; do
-    [ -r "$f" ] && source "$f"
+for file in ~/.{path,bash_prompt,exports,functions,alias,extra}; do
+    [ -r "$file" ] && source "$file"
 done
+
+unset file
 
 eval $(dircolors -b ~/.dir_colors)
 

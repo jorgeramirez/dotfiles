@@ -40,6 +40,6 @@ In order to update submodules run `$HOME/scripts/update-submodules.sh` then just
 push back the changes to your repository. I'll do this at least once a week.
 
 ##Custom commands
-This feature is based on [Mathias Bynens](https://github.com/mathiasbynens/dotfiles) and lets
-you add custom commands without forking this project. Just create a file named **~/.extra** and put there
-your custom commands or stuff you do not want to make public.
+This feature is based on [Mathias Bynens](https://github.com/mathiasbynens/dotfiles) dotfiles and lets
+you add custom commands without forking this project. Basically if `~/.extra` exists it will be sourced.
+Put inside this file your custom commands or stuff you do not want to make public.
