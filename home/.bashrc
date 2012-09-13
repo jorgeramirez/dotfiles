@@ -93,3 +93,6 @@ print_bold() {
 
 ## z command
 . $HOME/bin/z.git/z.sh
+
+## npm completion
+. <(npm completion)
