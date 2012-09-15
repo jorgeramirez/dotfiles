@@ -18,13 +18,7 @@ if has("t_Co") && &t_co == 8
     set t_co=256
 endif
 
-" set $term to rxvt-unicode-256color
-" this make fn keys work otherwise fn + p will 
-" insert a j instead of *
-set term=rxvt-unicode-256color
-
 colorscheme smyck
-
 
 
 " Preferences
@@ -123,6 +117,10 @@ set pastetoggle=<F2>
 " NERDTree & Tagbar
 nmap <F3> :NERDTreeToggle<CR>
 nmap <F4> :TagbarToggle<CR>
+
+" Command-T
+nmap <C-i> :CommandT<CR>
+nmap <C-b> :CommandTBuffer<CR>
 
 
 
