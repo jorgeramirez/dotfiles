@@ -91,3 +91,6 @@
 [submodule "bin/z.git"]
 	path = bin/z.git
 	url = git://github.com/rupa/z.git
+[submodule "bundle/command-t"]
+	path = bundle/command-t
+	url = git://git.wincent.com/command-t.git

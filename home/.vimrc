@@ -3,7 +3,7 @@
 
 "use pathogen to manage and load plugins
 call pathogen#infect()   
-
+call pathogen#helptags()
 
 filetype plugin on
 filetype indent on
