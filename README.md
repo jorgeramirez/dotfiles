@@ -28,11 +28,13 @@ You need to create the following startup apps (depends on Desktop Enviroment)
 * yeahconsole launcher: binds to $HOME/scripts/yeahconsole-launcher.sh
 * fake xinitrc (if using DM): binds to $HOME/scripts/fake-xinitrc.sh
 
-##Updating
+##Helper scripts
 
 ###Update repository
 
-Run `$HOME/scripts/update.sh` to update your repository.
+If you fork this project you can run `$HOME/scripts/update.sh upstream` to pull updates
+from upstream or `$HOME/scripts/update.sh` to pull from origin. Then just push back
+the changes to your repository if necessary.
 
 ###Update submodules
 
