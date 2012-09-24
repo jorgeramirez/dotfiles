@@ -16,8 +16,6 @@ done
 
 unset file
 
-eval $(dircolors -b ~/.dir_colors)
-
 ## z command
 . $HOME/bin/z.git/z.sh
 

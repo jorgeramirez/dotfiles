@@ -6,9 +6,9 @@
 # 
 
 # set correct term
-set -g default-terminal screen-256color
+set -g default-terminal "screen-256color"
 
-# set prefix key to ctrl+a
+# met prefix key to ctrl+a
 set-option -g prefix C-a
 
 
@@ -25,11 +25,13 @@ bind-key -n C-s split-window -h
 setw -g mode-keys vi
 unbind-key [
 bind-key Escape copy-mode
-unbind-key p
-bind-key p paste-buffer
+unbind p
+bind p paste-buffer
 bind-key -t vi-copy 'v' begin-selection
 bind-key -t vi-copy 'y' copy-selection
 
+
+unbind-key -n M-t
 # pane/window movement
 bind-key j command-prompt -p "join pane from:" "join-pane -s '%%'"
 bind-key s command-prompt -p "send pane to:" "join-pane -t '%%'"
@@ -83,11 +85,6 @@ set -g set-titles on
 # enable auto renaming
 setw -g automatic-rename on
 
-# border colours
-set -g pane-border-fg magenta
-set -g pane-active-border-fg magenta
-set -g pane-active-border-bg default
-
 # wm window title string (uses statusbar variables)
 set -g set-titles-string "tmux:#I [ #W ]"
 
@@ -108,30 +105,35 @@ set -g status-interval 1
 set -g status-justify centre # center align window list
 
 # default statusbar colors
-set -g status-fg white
-set -g status-bg default
+set-option -g status-bg "#4d5057"
+set-option -g status-fg "#f0c674"
 
 # in order to make vim arrow keys mapping work
 setw -g xterm-keys on
 
-# default window title colors
-set-window-option -g window-status-fg black
+# window title
+set-window-option -g window-status-fg "#b5bd68"
 set-window-option -g window-status-bg default
-set-window-option -g window-status-attr bright
+set-window-option -g window-status-attr dim
 
-# active window title colors
-set-window-option -g window-status-current-fg white
+# Active window
+set-window-option -g window-status-current-fg "#81a2be"
 set-window-option -g window-status-current-bg default
 set-window-option -g window-status-current-attr bright
 
-# command/message line colors
-set -g message-fg white
-set -g message-bg black
-set -g message-attr bright
+
+# Pane Border
+set-option -g pane-border-fg "#28212e"
+set-option -g pane-active-border-fg "#373b41"
+
+
+# Message text
+set-option -g message-bg "#373b41"
+set-option -g message-fg "#cc6666"
+
 
 # scroll issues
 set -g terminal-overrides 'xterm*:smcup@:rmcup@'
-
 # Allow mouse to interact with windows and panes
 #set -g mouse-resize-pane on
 #set -g mouse-select-pane on

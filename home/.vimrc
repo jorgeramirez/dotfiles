@@ -9,7 +9,6 @@ filetype plugin on
 filetype indent on
 
 
-
 " theme preferences
 " -----------------
 syntax on
@@ -18,8 +17,8 @@ if has("t_Co") && &t_co == 8
     set t_co=256
 endif
 
-colorscheme smyck
-
+set term=screen-256color
+colorscheme Tomorrow-Night
 
 " Preferences
 " -----------
@@ -89,8 +88,6 @@ set incsearch           " increment search
 set ignorecase          " case-insensitive search
 set smartcase           " uppercase causes case-sensitive search
 
-
-
 " tmux
 " ----
 if &term =~ '^screen'
@@ -100,8 +97,6 @@ if &term =~ '^screen'
     execute "set <xRight>=\e[1;*C"
     execute "set <xLeft>=\e[1;*D"
 endif
-
-
 
 " keymap
 " ------

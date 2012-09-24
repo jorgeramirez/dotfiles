@@ -24,16 +24,6 @@ URxvt.buffered: true
 URxvt*cursorBlink:      false
 URxvt*borderless:       1
 
-URxvt*skipBuiltinGlyphs: true
-URxvt*xftAntialias:     true
-URxvt*depth:            32
-URxvt*transparent:      true
-URxvt*inheritPixmap:    true
-URxvt*shading:          35
-URxvt*fadeColor:        black
-URxvt*tintColor:        #555555
-URxvt*dynamicColors:    on
-
 URxvt*visualBell:       true
 URxvt*urgentOnBell:     true
 urxvt*colorMode: on
@@ -75,12 +65,13 @@ URxvt.colorUL:   #87afd7
 !URxvt.font: xft:terminus:size=10
 !URxvt.boldFont: xft:terminus:size=10
 
-URxvt*font:xft:Bitstream Vera Sans Mono-10 
+!URxvt*font:xft:Bitstream Vera Sans Mono-10 
+URxvt*font:xft:Droid Sans Mono:size=10
 ! }}}
 
 !-------------------------------------------------------------------------------
 ! {{{ Colours
-#include ".colors/Smyck"
+#include ".colors/TomorrowNight"
 
 !tab colors
 URxvt.tabbed.tabbar-fg: 12
