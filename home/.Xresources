@@ -86,7 +86,7 @@ URxvt.tabbed.title-bg: 4
 yeahconsole*term:          urxvt
 yeahconsole*scrollBar:     false
 yeahconsole*handleWidth:   2
-yeahconsole*consoleHeight: 49
+yeahconsole*consoleHeight: 48
 yeahconsole*aniDelay:      0
 yeahconsole*stepSize:      25
 yeahconsole*toggleKey:     none+F12
