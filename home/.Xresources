@@ -60,7 +60,7 @@ URxvt.keysym.0xffae: \033[1;On
 !divide
 URxvt.keysym.0xffaf: \033[1;Oo
 !digits
-!commented out, because it doesn't work. I can live with that =P
+!commented out, because it does not work. I can live with that =P
 !URxvt.keysym.0xffb0: \033[1;Op
 !URxvt.keysym.0xffb1: \033[1;Oq
 !URxvt.keysym.0xffb2: \033[1;Or
