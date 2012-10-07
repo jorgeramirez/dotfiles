@@ -79,7 +79,10 @@ autocmd FileType xhtml setlocal textwidth=0
 autocmd FileType css setlocal sw=2
 autocmd FileType css setlocal ts=2
 autocmd FileType css setlocal sts=2
-
+" JavaScript (tab width 2 chr, wrap at 79th char)
+autocmd FileType javascript setlocal sw=2
+autocmd FileType javascript setlocal ts=2
+autocmd FileType javascript setlocal sts=2
 
 " searching
 set hlsearch            " highlight all search results
