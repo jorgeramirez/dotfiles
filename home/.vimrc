@@ -35,7 +35,7 @@ set wildmenu            " enhanced tab-completion shows all matching cmds in a p
 set spelllang=en_us     " real English spelling
 let g:is_posix=1        " POSIX shell scripts
 set wildmode=list:longest,full
-let g:loaded_matchparen=1
+"let g:loaded_matchparen=1
 set showmode
 
 if has("mouse")
