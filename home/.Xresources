@@ -48,30 +48,15 @@ URxvt.keysym.Control-Down:    \033[1;5B
 URxvt.keysym.Control-Left:    \033[1;5D
 URxvt.keysym.Control-Right:   \033[1;5C
 !multiply
-URxvt.keysym.0xffaa: \033[1;0j
+URxvt.keysym.0xffaa: *
 !add
-URxvt.keysym.0xffab: \033[1;Ok
-!separator
-!URxvt.keysym.0xffac: \033[1;On
+URxvt.keysym.0xffab: +
 !substract
-URxvt.keysym.0xffad: \033[1;Om
+URxvt.keysym.0xffad: -
 !decimal
-URxvt.keysym.0xffae: \033[1;On
+URxvt.keysym.0xffae: .
 !divide
-URxvt.keysym.0xffaf: \033[1;Oo
-!digits
-!commented out, because it does not work. I can live with that =P
-!URxvt.keysym.0xffb0: \033[1;Op
-!URxvt.keysym.0xffb1: \033[1;Oq
-!URxvt.keysym.0xffb2: \033[1;Or
-!URxvt.keysym.0xffb3: \033[1;Os
-!URxvt.keysym.0xffb4: \033[1;Ot
-!URxvt.keysym.0xffb5: \033[1;Ou
-!URxvt.keysym.0xffb6: \033[1;Ov
-!URxvt.keysym.0xffb7: \033[1;Ow
-!URxvt.keysym.0xffb8: \033[1;Ox
-!URxvt.keysym.0xffb9: \033[1;Oy
-!--------------------------------------------------
+URxvt.keysym.0xffaf: /
 
 !disable keycode picture mode
 URxvt.iso14755: false

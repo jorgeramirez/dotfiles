@@ -98,22 +98,6 @@ if &term =~ '^screen'
     execute "set <xDown>=\e[1;*B"
     execute "set <xRight>=\e[1;*C"
     execute "set <xLeft>=\e[1;*D"
-    execute "set <kMultiply>=\e[1;0j"
-    execute "set <kPlus>=\e[1;Ok"
-    execute "set <kMinus>=\e[1;Om"
-    execute "set <kPoint>=\e[1;On"
-    execute "set <kDivide>=\e[1;Oo"
-    "commented out because it does not work. But I can live with that =P
-    "execute set <k0>=\e[1;Op
-    "execute set <k1>=\e[1;Oq
-    "execute set <k2>=\e[1;Or
-    "execute set <k3>=\e[1;Os
-    "execute set <k4>=\e[1;Ot
-    "execute set <k5>=\e[1;Ou
-    "execute set <k6>=\e[1;Ov
-    "execute set <k7>=\e[1;Ow
-    "execute set <k8>=\e[1;Ox
-    "execute set <k9>=\e[1;Oy
 endif
 
 " keymap
