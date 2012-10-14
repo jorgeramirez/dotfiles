@@ -372,12 +372,11 @@ end
 function draw_gauge_ring(display, data, value)
 
     -- if the gauge is wlan0/eth0 check if it is up in order to render it
-    local net_file = io.open('/proc/net/route', 'r')
     local data_arg = data['arg']
-    if (data_arg == 'wlan0' or data_arg == 'eth0') and string.find(net_file:read("*a"), data_arg) == nil then
-        return
-    end
-    net_file:close()
+    local eth0 = conky_parse('${if_existing /proc/net/route eth0}1${else}0${endif}')
+    local wlan0 = conky_parse('${if_existing /proc/net/route wlan0}1${else}0${endif}')
+    if data_arg == 'eth0' and not eth0 then return end
+    if data_arg == 'wlan0' and not wlan0 then return end
     ----
 
     local max_value = data['max_value']
