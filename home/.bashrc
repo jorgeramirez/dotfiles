@@ -21,3 +21,9 @@ unset file
 
 ## npm completion
 . <(npm completion)
+
+for i in ~/.completion/*; do
+    if [ -e $i ]; then
+        . $i
+    fi
+done
