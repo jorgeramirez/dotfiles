@@ -245,7 +245,7 @@ gauge = {
 },
 {
     name='downspeedf',           arg='wlan0',                max_value=100,
-    x=40,                          y=695,
+    x=40,                          y=608,
     graph_radius=34,
     graph_thickness=10,
     graph_start_angle=180,
@@ -266,7 +266,7 @@ gauge = {
 },
 {
     name='upspeedf',           arg='wlan0',                max_value=100,
-    x=40,                          y=695,
+    x=40,                          y=608,
     graph_radius=22,
     graph_thickness=10,
     graph_start_angle=180,
