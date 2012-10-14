@@ -8,7 +8,7 @@
 --==============================================================================
 
 -- This is a slightly modified version of the original
---     author: Jorge Ramirez <jorgeramirez1990@gmail.com>
+--     Changes by: Jorge Ramirez <jorgeramirez1990@gmail.com>
 
 require 'cairo'
 
