@@ -103,4 +103,4 @@ yeahconsole*stepSize:      25
 yeahconsole*toggleKey:     none+F12
 
 !the following option only works in my patched version of yeahconsole
-yeahconsole*yOffset:       22
+yeahconsole*yOffset:       25

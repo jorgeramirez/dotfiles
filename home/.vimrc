@@ -37,6 +37,7 @@ let g:is_posix=1        " POSIX shell scripts
 set wildmode=list:longest,full
 "let g:loaded_matchparen=1
 set showmode
+set clipboard=unnamedplus
 
 if has("mouse")
     set mouse=a
