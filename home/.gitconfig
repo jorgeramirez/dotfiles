@@ -57,6 +57,9 @@
 [merge]
 	# Include summaries of merged commits in newly created merge commit messages
 	log = true
+# set push.default to simple
+[push]
+    default = simple
 
 # URL shorthands
 [url "git@github.com:"]
@@ -70,4 +73,4 @@
 	pushInsteadOf = "gist:"
 	pushInsteadOf = "git://gist.github.com/"
 [url "git://gist.github.com/"]
-	insteadOf = "gist:"
+    insteadOf = "gist:"
