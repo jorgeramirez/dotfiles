@@ -27,3 +27,6 @@ for i in ~/.completion/*; do
         . $i
     fi
 done
+
+## disable caps lock since it breaks Fn keys
+setxkbmap -option caps:none
