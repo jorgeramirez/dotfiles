@@ -7,7 +7,7 @@
 export GAE=/opt/google_appengine
 
 ## Sencha SDK Tools enviroment
-export SENCHA_SDK_TOOLS_2_0_0_BETA3=/opt/SenchaSDKTools-2.0.0-beta3
+export SENCHA_CMD_PATH=/opt/Sencha/Cmd/3.0.0.250
 
 ## grep color
 export GREP_COLOR="1;31"

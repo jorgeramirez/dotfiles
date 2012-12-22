@@ -9,8 +9,8 @@ alias gaescaff='cp -r $GAE/new_project_template/* .'
 alias gaedeploy='python2 $GAE/appcfg.py'
 
 
-## Sencha SDK Tools enviroment
-alias sencha="$SENCHA_SDK_TOOLS_2_0_0_BETA3/sencha"
+## Sencha Cmd enviroment
+alias sencha="$SENCHA_CMD_PATH/sencha"
 
 ### general
 alias vi='vim'
