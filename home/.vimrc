@@ -145,3 +145,7 @@ let g:user_zen_leader_key = '<c-t>'
 let g:html_indent_inctags = "html,body,head,tbody"
 let g:html_indent_script1 = "inc"
 let g:html_indent_style1 = "inc"
+
+" vim-latexsuite plugin
+set grepprg=grep\ -nH\ $*
+let g:tex_flavor = "latex"
