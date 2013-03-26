@@ -94,3 +94,6 @@
 [submodule "home/.vim/bundle/command-t.git"]
 	path = home/.vim/bundle/command-t.git
 	url = git://git.wincent.com/command-t.git
+[submodule "home/.vim/bundle/grunt.vim.git"]
+	path = home/.vim/bundle/grunt.vim.git
+	url = git://github.com/mklabs/grunt.vim.git
