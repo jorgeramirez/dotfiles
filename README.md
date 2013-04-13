@@ -16,8 +16,8 @@ My personal dotfiles, scripts, etc.
 Just issue the following
 
     $ homesick clone jorgeramirez/dotfiles
-    $ ln -s $HOME/.homesick/repos/dotfiles/scripts/ $HOME/scripts
-    $ ln -s $HOME/.homesick/repos/dotfiles/bin/ $HOME/bin
+    $ ln -s $HOME/.homesick/repos/jorgeramirez/dotfiles/scripts/ $HOME/scripts
+    $ ln -s $HOME/.homesick/repos/jorgeramirez/dotfiles/bin/ $HOME/bin
     $ chmod +x $HOME/scripts/*
     $ cd $HOME/bin/yeahconsole && make && sudo make install && cd $HOME
 
