@@ -31,6 +31,3 @@ alias la="ls -AlF"
 ###  Power
 alias reboot="sudo shutdown -r now"
 alias shut="sudo shutdown -h now"
-
-### Pacman
-alias pacman='pacman-color'
