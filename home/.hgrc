@@ -7,5 +7,5 @@ editor = vim
 pager =
 
 [pager]
-attend = annotate, cat, diff, export, glog, help, log, qdiff, status, tip
+attend = annotate, cat, diff, export, glog, help, log, qdiff, tip
 pager = /usr/bin/less
