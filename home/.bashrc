@@ -8,7 +8,7 @@
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
-[[ $TERM != screen* && "$TERM" != "linux" ]] && exec tmux
+#[[ $TERM != screen* && "$TERM" != "linux" ]] && exec tmux
 
 for file in ~/.{path,bash_prompt,exports,functions,alias,extra}; do
     [ -r "$file" ] && source "$file"

@@ -4,7 +4,7 @@
 xrdb -merge $HOME/.Xresources
 
 # enable restart X
-setxkbmap -option terminate:ctrl_alt_bksp 
+#setxkbmap -option terminate:ctrl_alt_bksp 
 
 #if [ -x /usr/bin/autocutsel ]; then
     ##this will keep the clipboard in sync 
@@ -17,6 +17,7 @@ setxkbmap -option terminate:ctrl_alt_bksp
 #fi
 
 # start terminal emulation daemon
-/usr/bin/urxvtd -q -o -f 
+#/usr/bin/urxvtd -q -o -f 
 
-exec ck-launch-session dbus-launch gnome-session
+#exec ck-launch-session dbus-launch gnome-session
+exec startxfce4

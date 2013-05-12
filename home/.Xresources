@@ -11,96 +11,84 @@ Xft.dpi: 96
 Xft.rgba: rgb
 Xcursor*theme: Vanilla-DMZ
 
-! {{{ URxvt
-URxvt*termName:         rxvt-unicode-256color
-URxvt*loginShell:       true
-URxvt*saveLines:        10000
-URxvt*geometry:         89x24
-URxvt*iconFile:         /usr/share/icons/Faenza/apps/scalable/utilities-terminal.svg
-URxvt*scrollBar:        false
-URxvt*secondaryScroll:  true
+!! {{{ URxvt
+!URxvt*termName:         rxvt-unicode-256color
+!URxvt*loginShell:       true
+!URxvt*saveLines:        10000
+!URxvt*geometry:         89x24
+!URxvt*iconFile:         /usr/share/icons/Faenza/apps/scalable/utilities-terminal.svg
+!URxvt*scrollBar:        false
+!URxvt*secondaryScroll:  true
 
-URxvt.buffered: true
-URxvt*cursorBlink:      false
-URxvt*borderless:       1
+!URxvt.buffered: true
+!URxvt*cursorBlink:      false
+!URxvt*borderless:       1
 
-URxvt*visualBell:       true
-URxvt*urgentOnBell:     true
-urxvt*colorMode: on
-URxvt*perl-lib:           /usr/lib/urxvt/perl/
-URxvt*perl-ext-common:    default,tabbed,matcher,keyboard-select,clipboard,fullscreen
-URxvt*urlLauncher:        /usr/bin/chromium
-URxvt*matcher.button:     1
-URxvt*matcher.pattern.1:  \\bwww\\.[\\w-]+\\.[\\w./?&@#-]*[\\w/-]
-!URxvt.copyCommand:  xclip -i -selection clipboard
-!URxvt.pasteCommand: xclip -o -selection clipboard
-URxvt*keysym.C-u:         perl:matcher
-URxvt*keysym.M-Escape:    perl:keyboard-select:activate
-URxvt*keysym.M-e:         perl:keyboard-select:activate
-URxvt*keysym.C-y:      perl:clipboard:copy
-URxvt*keysym.C-v:      perl:clipboard:paste
-URxvt*keysym.F11:         perl:fullscreen:switch
+!URxvt*visualBell:       true
+!URxvt*urgentOnBell:     true
+!urxvt*colorMode: on
+!URxvt*perl-lib:           /usr/lib/urxvt/perl/
+!URxvt*perl-ext-common:    default,tabbed,matcher,keyboard-select,clipboard,fullscreen
+!URxvt*urlLauncher:        /usr/bin/chromium
+!URxvt*matcher.button:     1
+!URxvt*matcher.pattern.1:  \\bwww\\.[\\w-]+\\.[\\w./?&@#-]*[\\w/-]
+!!URxvt.copyCommand:  xclip -i -selection clipboard
+!!URxvt.pasteCommand: xclip -o -selection clipboard
+!URxvt*keysym.C-u:         perl:matcher
+!URxvt*keysym.M-Escape:    perl:keyboard-select:activate
+!URxvt*keysym.M-e:         perl:keyboard-select:activate
+!URxvt*keysym.C-y:      perl:clipboard:copy
+!URxvt*keysym.C-v:      perl:clipboard:paste
+!URxvt*keysym.F11:         perl:fullscreen:switch
 
-!making vi recognize Control-Arrows and keypad keys
-!--------------------------------------------------
-URxvt.keysym.Control-Up:      \033[1;5A
-URxvt.keysym.Control-Down:    \033[1;5B
-URxvt.keysym.Control-Left:    \033[1;5D
-URxvt.keysym.Control-Right:   \033[1;5C
-!multiply
-URxvt.keysym.0xffaa: *
-!add
-URxvt.keysym.0xffab: +
-!substract
-URxvt.keysym.0xffad: -
-!decimal
-URxvt.keysym.0xffae: .
-!divide
-URxvt.keysym.0xffaf: /
+!!making vi recognize Control-Arrows and keypad keys
+!!--------------------------------------------------
+!URxvt.keysym.Control-Up:      \033[1;5A
+!URxvt.keysym.Control-Down:    \033[1;5B
+!URxvt.keysym.Control-Left:    \033[1;5D
+!URxvt.keysym.Control-Right:   \033[1;5C
+!!multiply
+!URxvt.keysym.0xffaa: *
+!!add
+!URxvt.keysym.0xffab: +
+!!substract
+!URxvt.keysym.0xffad: -
+!!decimal
+!URxvt.keysym.0xffae: .
+!!divide
+!URxvt.keysym.0xffaf: /
 
-!disable keycode picture mode
-URxvt.iso14755: false
-URxvt.iso14755_52: false
+!!disable keycode picture mode
+!URxvt.iso14755: false
+!URxvt.iso14755_52: false
 
-!highlight man pages search
-URxvt.colorIT:   #87af5f
-URxvt.colorUL:   #87afd7
+!!highlight man pages search
+!URxvt.colorIT:   #87af5f
+!URxvt.colorUL:   #87afd7
 
-! }}}
+!! }}}
 
-!-------------------------------------------------------------------------------
-! {{{ Fonts
-URxvt*font:xft:Droid Sans Mono:size=10
-!URxvt.font:xft:monospace:medium:size=10
-!URxvt.boldFont:xft:monospace:medium:size=10
+!!-------------------------------------------------------------------------------
+!! {{{ Fonts
+!URxvt*font:xft:Droid Sans Mono:size=10
+!!URxvt.font:xft:monospace:medium:size=10
+!!URxvt.boldFont:xft:monospace:medium:size=10
 
-!URxvt.font: xft:terminus:size=10
-!URxvt.boldFont: xft:terminus:size=10
+!!URxvt.font: xft:terminus:size=10
+!!URxvt.boldFont: xft:terminus:size=10
 
-!URxvt*font:xft:Bitstream Vera Sans Mono-10 
-! }}}
+!!URxvt*font:xft:Bitstream Vera Sans Mono-10 
+!! }}}
 
-!-------------------------------------------------------------------------------
-! {{{ Colours
-#include ".colors/TomorrowNight"
+!!-------------------------------------------------------------------------------
+!! {{{ Colours
+!#include ".colors/TomorrowNight"
 
-!tab colors
-URxvt.tabbed.tabbar-fg: 12
-URxvt.tabbed.tabbar-bg: 0
-URxvt.tabbed.tab-fg:    0
-URxvt.tabbed.tab-bg:    4
-URxvt.tabbed.title-fg: 0
-URxvt.tabbed.title-bg: 4
-!}}}
-
-!---YeahConsole---
-yeahconsole*term:          urxvt
-yeahconsole*scrollBar:     false
-yeahconsole*handleWidth:   2
-yeahconsole*consoleHeight: 48
-yeahconsole*aniDelay:      0
-yeahconsole*stepSize:      25
-yeahconsole*toggleKey:     none+F12
-
-!the following option only works in my patched version of yeahconsole
-yeahconsole*yOffset:       25
+!!tab colors
+!URxvt.tabbed.tabbar-fg: 12
+!URxvt.tabbed.tabbar-bg: 0
+!URxvt.tabbed.tab-fg:    0
+!URxvt.tabbed.tab-bg:    4
+!URxvt.tabbed.title-fg: 0
+!URxvt.tabbed.title-bg: 4
+!!}}}
