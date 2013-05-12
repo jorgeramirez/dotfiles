@@ -38,7 +38,7 @@ push back the changes to your repository. I'll do this at least once a week.
 
 ## Configurations file directory
 
-The enviroment variable `$CONFIGS\_DIR` is set to `$HOME/.bash-configs` or `$HOME/.zsh-configs` depending on your
+The enviroment variable `$CONFIGS_DIR` is set to `$HOME/.bash-configs` or `$HOME/.zsh-configs` depending on your
 `$SHELL`. This directory contains all the configurations files that are sourced by the shell's main configuration
 file. 
 

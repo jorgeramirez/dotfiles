@@ -14,7 +14,7 @@
 CONFIGS_DIR=~/.bash-configs
 
 # source configuration files
-for file in $CONFIGS_DIR/*.sh; do
+for file in $CONFIGS_DIR/{*,**/*}.sh; do
     [ -r "$file" ] && source "$file"
 done
 
@@ -25,12 +25,6 @@ unset file
 
 ## npm completion
 . <(npm completion)
-
-for i in ~/.completion/*; do
-    if [ -e $i ]; then
-        . $i
-    fi
-done
 
 ## disable caps lock since it breaks Fn keys
 setxkbmap -option caps:none

@@ -50,7 +50,7 @@ source $ZSH/oh-my-zsh.sh
 CONFIGS_DIR=~/.zsh-configs
 
 # source configuration files
-for file in $CONFIGS_DIR/*.zsh; do
+for file in $CONFIGS_DIR/**/*.zsh; do
     [ -r "$file" ] && source "$file"
 done
 
