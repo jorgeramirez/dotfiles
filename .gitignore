@@ -1,2 +1,4 @@
 *.sw[op]
 **/*.sw[op]
+home/.zsh-configs/extra.*
+home/.bash-configs/extra.*

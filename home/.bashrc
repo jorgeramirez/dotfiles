@@ -10,7 +10,11 @@
 [[ $- != *i* ]] && return
 #[[ $TERM != screen* && "$TERM" != "linux" ]] && exec tmux
 
-for file in ~/.{path,bash_prompt,exports,functions,alias,extra}; do
+# configuration files directory
+CONFIGS_DIR=~/.bash-configs
+
+# source configuration files
+for file in $CONFIGS_DIR/*.sh; do
     [ -r "$file" ] && source "$file"
 done
 

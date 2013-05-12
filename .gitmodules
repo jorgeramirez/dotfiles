@@ -97,3 +97,6 @@
 [submodule "home/.vim/bundle/grunt.vim.git"]
 	path = home/.vim/bundle/grunt.vim.git
 	url = git://github.com/mklabs/grunt.vim.git
+[submodule "home/.oh-my-zsh"]
+	path = home/.oh-my-zsh
+	url = git://github.com/robbyrussell/oh-my-zsh.git
