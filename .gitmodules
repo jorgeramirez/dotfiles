@@ -100,3 +100,6 @@
 [submodule "home/.oh-my-zsh"]
 	path = home/.oh-my-zsh
 	url = git://github.com/robbyrussell/oh-my-zsh.git
+[submodule "home/.vim/bundle/vim-flake8.git"]
+	path = home/.vim/bundle/vim-flake8.git
+	url = git://github.com/nvie/vim-flake8.git

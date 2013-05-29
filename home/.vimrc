@@ -149,3 +149,6 @@ let g:html_indent_style1 = "inc"
 " vim-latexsuite plugin
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor = "latex"
+
+" vim-flake8 plugin
+autocmd BufWritePost *.py call Flake8()
