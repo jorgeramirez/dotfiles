@@ -103,3 +103,6 @@
 [submodule "home/.vim/bundle/vim-snippets.git"]
 	path = home/.vim/bundle/vim-snippets.git
 	url = git://github.com/honza/vim-snippets.git
+[submodule "home/.vim/bundle/vim-multiple-cursors.git"]
+	path = home/.vim/bundle/vim-multiple-cursors.git
+	url = git@github.com:terryma/vim-multiple-cursors.git
