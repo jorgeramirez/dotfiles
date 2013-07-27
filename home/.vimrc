@@ -91,16 +91,6 @@ set incsearch           " increment search
 set ignorecase          " case-insensitive search
 set smartcase           " uppercase causes case-sensitive search
 
-" tmux
-" ----
-"if &term =~ '^screen'
-    "" tmux will send xterm-style keys when its xterm-keys option is on
-    "execute "set <xUp>=\e[1;*A"
-    "execute "set <xDown>=\e[1;*B"
-    "execute "set <xRight>=\e[1;*C"
-    "execute "set <xLeft>=\e[1;*D"
-"endif
-
 " keymap
 " ------
 
@@ -120,7 +110,11 @@ nmap <F4> :TagbarToggle<CR>
 nmap <C-i> :CommandT<CR>
 nmap <C-b> :CommandTBuffer<CR>
 
-
+" window navigation
+nnoremap <silent> <C-Right> <c-w>l
+nnoremap <silent> <C-Left> <c-w>h
+nnoremap <silent> <C-Up> <c-w>k
+nnoremap <silent> <C-Down> <c-w>j
 
 " Plugin configs
 " --------------
@@ -153,4 +147,3 @@ let g:tex_flavor = "latex"
 " vim-flake8 plugin
 autocmd BufWritePost *.py call Flake8()
 let g:flake8_cmd = "flake8-python2" " flake8 for python2. Comment this line to use python3 version of flake8
-
