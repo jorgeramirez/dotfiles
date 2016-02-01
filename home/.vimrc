@@ -116,10 +116,16 @@ nmap <C-i> :CommandT<CR>
 nmap <C-b> :CommandTBuffer<CR>
 
 " window navigation
-nnoremap <silent> <C-Right> <c-w>l
-nnoremap <silent> <C-Left> <c-w>h
-nnoremap <silent> <C-Up> <c-w>k
-nnoremap <silent> <C-Down> <c-w>j
+" linux
+"nnoremap <silent> <C-Right> <c-w>l
+"nnoremap <silent> <C-Left> <c-w>h
+"nnoremap <silent> <C-Up> <c-w>k
+"nnoremap <silent> <C-Down> <c-w>j
+" osx
+nnoremap <silent> OF <c-w>l
+nnoremap <silent> OH <c-w>h
+nnoremap <silent> [5~ <c-w>k
+nnoremap <silent> [6~ <c-w>j
 
 " Plugin configs
 " --------------
