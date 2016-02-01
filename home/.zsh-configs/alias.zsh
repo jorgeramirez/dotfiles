@@ -21,7 +21,7 @@ alias sudo='sudo '
 
 ### colour coreutils
 alias grep="grep --color=auto"
-alias ls="ls --color=auto"
+#alias ls="ls --color=auto"
 alias la="ls -AlF"
 
 ###  Power
