@@ -158,3 +158,4 @@ let g:tex_flavor = "latex"
 " vim-flake8 plugin
 autocmd BufWritePost *.py call Flake8()
 let g:flake8_cmd = "flake8-python2" " flake8 for python2. Comment this line to use python3 version of flake8
+autocmd BufEnter * if &modifiable | NERDTreeFind | wincmd p | endif
