@@ -7,10 +7,15 @@ call pathogen#helptags()
 
 filetype plugin on
 filetype indent on
-
+filetype on
 " theme preferences
 " -----------------
 syntax on
+set tabstop=2                " tabs appear as n number of columns
+set shiftwidth=2             " n cols for auto-indenting
+set expandtab                " insert spaces instead of tabs
+set autoindent  smartindent  " auto indents next new line
+set smarttab                 " make <tab> and <backspace> smarter
 
 if has("t_Co") && &t_co == 8
     set t_co=256
@@ -60,8 +65,8 @@ if exists("&undodir")
 endif
 
 " tabs and indenting
-set tabstop=4                " tabs appear as n number of columns
-set shiftwidth=4             " n cols for auto-indenting
+set tabstop=2                " tabs appear as n number of columns
+set shiftwidth=2             " n cols for auto-indenting
 set expandtab                " insert spaces instead of tabs
 set autoindent  smartindent  " auto indents next new line
 set smarttab                 " make <tab> and <backspace> smarter
@@ -158,3 +163,4 @@ let g:tex_flavor = "latex"
 " vim-flake8 plugin
 autocmd BufWritePost *.py call Flake8()
 let g:flake8_cmd = "flake8-python2" " flake8 for python2. Comment this line to use python3 version of flake8
+set clipboard=unnamed

@@ -63,3 +63,22 @@ LUNCHY_DIR=$(dirname `gem which lunchy`)/../extras
 if [ -f $LUNCHY_DIR/lunchy-completion.zsh ]; then
     . $LUNCHY_DIR/lunchy-completion.zsh
 fi
+
+export ORACLE_HOME=~/Software/instantclient_11_2
+export LD_LIBRARY_PATH=$ORACLE_HOME
+export DYLD_LIBRARY_PATH=$ORACLE_HOME
+export TNS_ADMIN=$ORACLE_HOME
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/jorge/.sdkman"
+[[ -s "/Users/jorge/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/jorge/.sdkman/bin/sdkman-init.sh"
+
+export NVM_DIR="/Users/jorge/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+. "/Users/jorge/.acme.sh/acme.sh.env"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/jorge/Software/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/jorge/Software/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/jorge/Software/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/jorge/Software/google-cloud-sdk/completion.zsh.inc'; fi
