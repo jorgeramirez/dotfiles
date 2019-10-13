@@ -17,6 +17,8 @@ Just issue the following
     $ ln -s $HOME/.homesick/repos/jorgeramirez/dotfiles/bin/ $HOME/bin
     $ chmod +x $HOME/scripts/*
 
+After the above steps, install [spaceship](https://github.com/denysdovhan/spaceship-prompt).
+
 ### Startup apps
 
 You need to create the following startup apps (depends on Desktop Enviroment)
