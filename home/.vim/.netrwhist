@@ -1,3 +1,2 @@
 let g:netrw_dirhistmax  =10
 let g:netrw_dirhist_cnt =1
-let g:netrw_dirhist_1='/Users/jorge/Development/work/codium/pro-amateur-files/pro-amateur-core/docker-resources'
