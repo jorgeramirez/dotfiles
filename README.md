@@ -9,6 +9,7 @@ First, install [thoughtbot/dotfiles](https://github.com/thoughtbot/dotfiles).
 Then create some symlinks:
 
 ```
+ln -s $HOME/Dev/dotfiles $HOME/dotfiles-local
 ln -s $HOME/Dev/dotfiles/gitconfig.local $HOME/.gitconfig.local
 ln -s $HOME/Dev/dotfiles/vimrc.bundles.local $HOME/.vimrc.bundles.local
 ```
