@@ -34,3 +34,30 @@ file.
 This feature is based on [Mathias Bynens](https://github.com/mathiasbynens/dotfiles) dotfiles and lets
 you add custom commands without forking this project. Basically if there is an `extra.sh` or `extra.zsh` file
 inside `$CONFIGS_DIR` it will be sourced. Put inside this file your custom commands or stuff you do not want to make public.
+
+
+# iTerm2/VS code font issues
+
+To avoid the following issue:
+
+![Font issue](./font-issue.png)
+
+install the powerline fonts as shown [here](https://fmacedoo.medium.com/oh-my-zsh-with-powerline-fonts-pretty-simple-as-you-deserve-fbe7f6d23723)
+
+and then update the iterm preferences as shown in this screenshot:
+
+
+![Fonts config iterm](./fonts-config.png)
+
+## Font fix for visual studio
+
+Your user settings should include the following:
+
+```json
+{
+    "workbench.editor.enablePreview": false,
+    "terminal.explorerKind": "external",
+    "terminal.external.osxExec": "iTerm.app",
+    "terminal.integrated.fontFamily": "Meslo LG M for Powerline"
+}
+```
