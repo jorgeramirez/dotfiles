@@ -4,15 +4,27 @@ My personal dotfiles built on top of [thoughtbot/dotfiles](https://github.com/th
 
 ## Install
 
-First, install [thoughtbot/dotfiles](https://github.com/thoughtbot/dotfiles). 
+Clone this repo, this README assumes you clone the repo into `$HOME/Dev/dotfiles`, and then create a symlink:
 
-Then create some symlinks:
-
-```
+```shell
 ln -s $HOME/Dev/dotfiles $HOME/dotfiles-local
-ln -s $HOME/Dev/dotfiles/gitconfig.local $HOME/.gitconfig.local
-ln -s $HOME/Dev/dotfiles/vimrc.bundles.local $HOME/.vimrc.bundles.local
 ```
+
+Then install [thoughtbot/dotfiles](https://github.com/thoughtbot/dotfiles). 
+
+Create some folders used by vim:
+
+```shell
+mkdir -p ~/.vim/backups ~/.vim/swaps ~/.vim/undo
+```
+
+Install Tomorrow-Night colorscheme for vim
+
+```shell
+mkdir -p $HOME/.vim/colors/ &&  curl https://raw.githubusercontent.com/chriskempson/tomorrow-theme/master/vim/colors/Tomorrow-Night.vim --output $HOME/.vim/colors/Tomorrow-Night.vim
+```
+
+Run `rcup` to generate some more symlinks.
 
 
 After the above steps, install [spaceship](https://github.com/denysdovhan/spaceship-prompt).

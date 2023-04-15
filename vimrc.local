@@ -1,18 +1,11 @@
 " author: jorge ramirez <jorgeramirez1990@gmail.com>
 " a subset of jason ryan's https://bitbucket.org/jasonwryan/eeepc .vimrc file
 
-"use pathogen to manage and load plugins
-call pathogen#infect()   
-call pathogen#helptags()
-
-filetype plugin on
-filetype indent on
-filetype on
 " theme preferences
 " -----------------
 syntax on
-set tabstop=2                " tabs appear as n number of columns
-set shiftwidth=2             " n cols for auto-indenting
+set tabstop=4                " tabs appear as n number of columns
+set shiftwidth=4             " n cols for auto-indenting
 set expandtab                " insert spaces instead of tabs
 set autoindent  smartindent  " auto indents next new line
 set smarttab                 " make <tab> and <backspace> smarter
@@ -65,35 +58,10 @@ if exists("&undodir")
 endif
 
 " tabs and indenting
-set tabstop=2                " tabs appear as n number of columns
-set shiftwidth=2             " n cols for auto-indenting
 set expandtab                " insert spaces instead of tabs
 set autoindent  smartindent  " auto indents next new line
 set smarttab                 " make <tab> and <backspace> smarter
 
-" HTML (tab width 2 chr, no wrapping)
-autocmd FileType html setlocal sw=2
-autocmd FileType html setlocal ts=2
-autocmd FileType html setlocal sts=2
-autocmd FileType html set textwidth=0
-" XHTML (tab width 2 chr, no wrapping)
-autocmd FileType xhtml setlocal sw=2
-autocmd FileType xhtml setlocal ts=2
-autocmd FileType xhtml setlocal sts=2
-autocmd FileType xhtml setlocal textwidth=0
-" CSS (tab width 2 chr, wrap at 79th char)
-autocmd FileType css setlocal sw=2
-autocmd FileType css setlocal ts=2
-autocmd FileType css setlocal sts=2
-" JavaScript (tab width 2 chr, wrap at 79th char)
-autocmd FileType javascript setlocal sw=2
-autocmd FileType javascript setlocal ts=2
-autocmd FileType javascript setlocal sts=2
-
-" JavaScript (tab width 2 chr, wrap at 79th char)
-autocmd FileType ruby setlocal sw=2
-autocmd FileType ruby setlocal ts=2
-autocmd FileType ruby setlocal sts=2
 
 " searching
 set hlsearch            " highlight all search results
@@ -103,10 +71,6 @@ set smartcase           " uppercase causes case-sensitive search
 
 " keymap
 " ------
-
-" SingleCompile plugin
-nmap <F9> :SCCompile<cr>
-nmap <F10> :SCCompileRun<cr>
 
 " pastetoogle
 nnoremap <F2> :set invpaste paste?<CR>
@@ -120,18 +84,6 @@ nmap <F4> :TagbarToggle<CR>
 nmap <C-i> :CommandT<CR>
 nmap <C-b> :CommandTBuffer<CR>
 
-" window navigation
-" linux
-"nnoremap <silent> <C-Right> <c-w>l
-"nnoremap <silent> <C-Left> <c-w>h
-"nnoremap <silent> <C-Up> <c-w>k
-"nnoremap <silent> <C-Down> <c-w>j
-" osx
-nnoremap <silent> OF <c-w>l
-nnoremap <silent> OH <c-w>h
-nnoremap <silent> [5~ <c-w>k
-nnoremap <silent> [6~ <c-w>j
-
 " Plugin configs
 " --------------
 
@@ -141,26 +93,15 @@ let g:miniBufExplMapWindowNavArrows = 1
 let g:miniBufExplModSelTarget = 1
 let g:miniBufExplorerMoreThanOne = 0
 
-" rainbown parentheses allways on
-"au VimEnter * RainbowParenthesesToggle
-"au Syntax * RainbowParenthesesLoadRound
-"au Syntax * RainbowParenthesesLoadSquare
-"au Syntax * RainbowParenthesesLoadBraces
-
-
-" zencoding plugin
-let g:user_zen_leader_key = '<c-t>'
-
-" vim-javascript plugin
-let g:html_indent_inctags = "html,body,head,tbody"
-let g:html_indent_script1 = "inc"
-let g:html_indent_style1 = "inc"
-
-" vim-latexsuite plugin
-set grepprg=grep\ -nH\ $*
-let g:tex_flavor = "latex"
-
-" vim-flake8 plugin
-autocmd BufWritePost *.py call Flake8()
-"let g:flake8_cmd = "flake8-python2" " flake8 for python2. Comment this line to use python3 version of flake8
 set clipboard=unnamed
+
+
+" use arrows :)
+nnoremap <Left> h
+nnoremap <Right> l
+nnoremap <Up> k
+nnoremap <Down> j
+
+
+" show | to guide indentation
+set list lcs=tab:\|\ 
