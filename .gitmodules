@@ -14,12 +14,6 @@
 [submodule "home/.vim/bundle/nerdtree"]
 	path = home/.vim/bundle/nerdtree
 	url = git://github.com/scrooloose/nerdtree.git
-[submodule "home/.vim/bundle/vim-css-color"]
-	path = home/.vim/bundle/vim-css-color
-	url = git://github.com/ap/vim-css-color.git
-[submodule "home/.vim/bundle/Color-Sampler-Pack"]
-	path = home/.vim/bundle/Color-Sampler-Pack
-	url = git://github.com/vim-scripts/Color-Sampler-Pack.git
 [submodule "home/.vim/bundle/SearchComplete"]
 	path = home/.vim/bundle/SearchComplete
 	url = git://github.com/vim-scripts/SearchComplete.git
